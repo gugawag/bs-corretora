@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- Regiao do cabecalho -->
-<header>
+<header class="fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand fonte-titulo" href="#">BS Corretora</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -20,96 +20,125 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página atual)</span></a>
                 <a class="nav-item nav-link" href="#">Imóveis</a>
-                <a class="nav-item nav-link" href="#">Fale Conosco</a>
+                <a class="nav-item nav-link" data-toggle="modal" data-target="#modal-contato" href="#">Fale Conosco</a>
             </div>
         </div>
     </nav>
 
 </header>
 
+<section id="titulo" class="pt-5 mt-3">
+    <div>
+        <h2 class="fonte-titulo text-center">Imóveis de alta .classe, com .estilo</h2>
+    </div>
+</section>
+
 <!-- Regiao das imagens -->
 <main>
-    <section id="casas">
-        <div>
-            <h2>Imóveis de alta .classe, com .estilo</h2>
-        </div>
+    <section id="casas" class="bg-light pb-3">
 
-        <div>
-            <img src="img/casa1.jpg" alt="Foto da casa 1"> Casa 1
-            <img src="img/casa2.jpg" alt="Foto da casa 2"> Casa 2
-            <img src="img/casa3.jpg" alt="Foto da casa 3"> Casa 3
-            <img src="img/casa4.jpg" alt="Foto da casa 4"> Casa 4
-            <img src="img/casa5.jpg" alt="Foto da casa 5"> Casa 5
-            <img src="img/casa6.jpg" alt="Foto da casa 6"> Casa 6
+        <div class="container">
+            <div class="row justify-content-md-around justify-content-center">
+                <article class="card card-imagem mt-3">
+                    <img class="card-imagem-top" src="img/casa1.jpg" alt="Casa 1" aria-label="Foto de uma casa: casa 1">
+                    <div class="card-body">
+                        <p class="card-text text-justify">Casa em Pirenópolis, em frente à cachoeira do roncador</p>
+                    </div>
+                </article>
+                <article class="card card-imagem mt-3">
+                    <img class="card-imagem-top" src="img/casa2.jpg" alt="Casa 2" aria-label="Foto de uma casa: casa 2">
+                    <div class="card-body">
+                        <p class="card-text text-justify">Casa no alto da serra do teixeira. Ideal para uma família
+                            aventureira</p>
+                    </div>
+                </article>
+                <article class="card card-imagem mt-3">
+                    <img class="card-imagem-top" src="img/casa3.jpg" alt="Casa 3" aria-label="Foto de uma casa: casa 3">
+                    <div class="card-body">
+                        <p class="card-text text-justify">Casa no condomínio Alphaville, o condomínio que terá o maior
+                            criadouro
+                            de peixes Beta</p>
+                    </div>
+                </article>
+                <article class="card card-imagem mt-3">
+                    <img class="card-imagem-top" src="img/casa4.jpg" alt="Casa 4" aria-label="Foto de uma casa: casa 4">
+                    <div class="card-body">
+                        <p class="card-text text-justify">Casa em Areia, pertinho dos engenhos e da natureza</p>
+                    </div>
+                </article>
+                <article class="card card-imagem mt-3">
+                    <img class="card-imagem-top" src="img/casa5.jpg" alt="Casa 5" aria-label="Foto de uma casa: casa 5">
+                    <div class="card-body">
+                        <p class="card-text text-justify">Casa de veraneio em Águas Claras de Lindóia</p>
+                    </div>
+                </article>
+                <article class="card card-imagem mt-3">
+                    <img class="card-imagem-top" src="img/casa6.jpg" alt="Casa 6" aria-label="Foto de uma casa: casa 6">
+                    <div class="card-body">
+                        <p class="card-text text-justify">Casa no alto da serra do teixeira. Ideal para uma família
+                            aventureira</p>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
     <!-- Regiao da casa em destaque -->
-    <section id="destaque">
+    <section id="destaque" class="mt-2 jumbotron">
         <div>
-            <h2>Destaque</h2>
-            Casa em Ilha Bela
-
-            <button type="button">Marque uma visita</button>
-            <img src="img/casa-destaque.jpg" alt="Foto da casa em destaque">
+            <div class="row">
+                <div class="col-3 align-items-center">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fonte-titulo">Destaque</h5>
+                            <p class="card-text">Casa em Ilha Bela. Venha conhecer essa perfeição da arquitetura!</p>
+                            <a href="#" class="btn btn-dark">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <img class="card-imagem-destaque rounded img-fluid img-thumbnail" src="img/casa-destaque.jpg" alt="Foto da casa em destaque">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Regiao dos depoimentos dos clientes -->
     <section id="clientes">
         <div>
-            <h2>Clientes</h2>
+            <h2 class="fonte-titulo">Clientes</h2>
 
-            <div>
-                <img src="img/foto-cliente1.jpeg" alt="Foto do cliente 1">
-                <div>
-                    <h3>Fulano de tal</h3>
-                    <div>foto
-                        Texto aqui falando bem da corretora porque ela é demais.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            <ul class="list-unstyled">
+                <li class="media">
+                    <img src="img/foto-cliente1.jpeg" class="mr-3 rounded" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">List-based media object</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
-                </div>
-            </div>
+                </li>
+                <li class="media my-4">
+                    <img src="img/foto-cliente2.jpeg" class="mr-3 rounded" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">List-based media object</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </li>
+                <li class="media">
+                    <img src="img/foto-cliente3.jpeg" class="mr-3 rounded" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">List-based media object</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </li>
+            </ul>
 
-            <div>
-                <img src="img/foto-cliente2.jpeg" alt="Foto do cliente 2">
-                <div>
-                    <h3>Fulano de tal</h3>
-                    <div>
-                        Texto aqui falando bem da corretora porque ela é demais.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <img src="img/foto-cliente3.jpeg" alt="Foto do cliente 3">
-                <div>
-                    <h3>Fulano de tal</h3>
-                    <div>
-                        Texto aqui falando bem da corretora porque ela é demais.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <img src="img/foto-cliente4.jpeg" alt="Foto do cliente 4">
-                <div>
-                    <h3>Fulano de tal</h3>
-                    <div>
-                        Texto aqui falando bem da corretora porque ela é demais.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Região dos planos de aluguéis -->
     <section id="planos">
         <div>
-            <h2>Planos de Aluguéis:</h2>
+            <h2 class="fonte-titulo">Planos de Aluguéis:</h2>
             <div>
                 <h3>Prata</h3>
                 <ul>
@@ -137,9 +166,28 @@
                 </ul>
                 <button>Assinar</button>
             </div>
-
         </div>
     </section>
+
+    <div id="modal-contato" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea style="width: 100%">Coloque eu texto aqui</textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
